@@ -9,9 +9,14 @@ class Solution{
     int firstElementKTime(int a[], int n, int k)
     { 
         int m=*max_element(a,a+n);
+        //  creating array of size equal to the max element of given array 
+        //to store count of each element
        int b[m] ={0};
+       
        for(int i=0;i<n;i++){
+           //incrementing count of each elemt of a[] at the index-1 in b[]
            b[a[i]-1]+=1;
+           //as soon as count of any element reaches k return its corresponding value in a[]
            if(b[a[i]-1]==k){
                return a[i];
            }
