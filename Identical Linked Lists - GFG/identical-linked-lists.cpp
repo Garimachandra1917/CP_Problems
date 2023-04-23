@@ -71,7 +71,10 @@ bool areIdentical(struct Node *head1, struct Node *head2)
     Node *ptr1=head1;
     Node *ptr2=head2;
     
-    
+    //traversing both the linked lists simultaneously
+    //and checks if data in both lists are equal or not
+    //if not equal return false
+    //if anyone of the two ends the loop breaks
     while(ptr1!=NULL && ptr2!=NULL)
         {
             if(ptr1->data!=ptr2->data)
@@ -81,44 +84,19 @@ bool areIdentical(struct Node *head1, struct Node *head2)
             ptr1=ptr1->next;
             ptr2=ptr2->next;
         }
-        
+     //if list1 is of larger size   
     if(ptr1!=NULL)
     {
         return false;
     }
+    
+    //if list2 is of larger size
     else if(ptr2!=NULL)
     {
         return false;
     }
+    //if both are identical
     else
       return true;
-        
-    
-    // while(ptr1!=NULL)
-    // {
-    //     N1++;
-    //     ptr1=ptr1->next;
-        
-    // }
-    // while(ptr2!=NULL)
-    // {
-    //     N2++;
-    //     ptr2=ptr2->next;
-        
-    // }
-    // if(N1!=N2)
-    //   return false;
-    
-    // else {
-    //     ptr1=head1;
-    //     ptr2=head2;
-    //     while(ptr1!=NULL && ptr2!=NULL)
-    //     {
-    //         if(ptr1->data!=ptr2->data)
-    //         {
-    //             return false;
-    //         }
-    //     }
-    // }
-    // return true;
+
 }
