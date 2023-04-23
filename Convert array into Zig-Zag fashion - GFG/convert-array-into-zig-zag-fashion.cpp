@@ -11,13 +11,20 @@ class Solution {
     // Program for zig-zag conversion of array
     void zigZag(int arr[], int n) {
         // code here
+        //itterate through each element
         for(int i=0;i<n-1;i++)
-        {
+        {   
+            //if its an even index 
+            //and value at that index is greater than the value at the next index
+            //swap them to follow pattern
             if(i%2==0 && arr[i]>arr[i+1])
             {
                 swap(arr[i],arr[i+1]);
             }
             
+             //if its an odd index 
+            //and value at that index is smaller than the value at the next index
+            //swap them to follow pattern
             else if(i%2==1 && arr[i]<arr[i+1])
             {
                swap(arr[i],arr[i+1]); 
