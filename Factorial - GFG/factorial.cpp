@@ -8,11 +8,7 @@ public:
     long long int factorial(int N){
         //code here
        
-        if(N<0)
-        {
-            return 0;
-        }
-        if(N==1||N==0)
+        if(N==1||N<=0)
         {
             return 1;
         }
