@@ -13,6 +13,9 @@ class Solution{
         
         //char* char_array = new char[n];
         //strcpy(char_array, s.c_str());
+        
+        //traverse the string in reverse order
+        //first occurance from the back is the last occurance in real of "1"
         for(int i=n-1;i>=0;i--)
         {
            if(s[i]=='1')
