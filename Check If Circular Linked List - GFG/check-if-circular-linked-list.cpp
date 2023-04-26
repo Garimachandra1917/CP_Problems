@@ -85,7 +85,7 @@ bool isCircular(Node *head)
    else 
    {   
        
-       //declare and initialize a node pointer to head
+       //declare and initialize a node pointer to head next
        Node *ptr=head->next;
     
        //traverse it while it is not equal to head or NULL
