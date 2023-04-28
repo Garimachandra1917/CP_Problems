@@ -22,7 +22,7 @@ class Solution{
         //to have the maximum element from the right 
         for(int i=n-2;i>=0;i--)
         {
-            //if an element of array is greater than the max element of its right
+            //if an element of array is greater than or equal the max element of its right
             //then it will be leader
             if(max1<=a[i])
             {
