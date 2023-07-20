@@ -1,4 +1,4 @@
-// //T(N^2)
+// 1.//T(N^2)
 // //S(1)
 
 // class Solution {
@@ -33,6 +33,8 @@
         
 // };
 
+
+/*2.--------------------------------------------------------------------------------------------------*/
 //T(N)
 //S(1)
 
@@ -41,13 +43,19 @@ public:
     bool check(vector<int>& nums) {
         
         int n=nums.size(),c=0;
+        // if there exits more than 2 breakpoints 
+        //i.e . array not behaving in correct manner 
+        //for more than 1 times 
+        //array is not rotated sorted arrray
         for(int i=0;i<n;i++)
-        { 
+        {   
+            // check for each elemt next elemt should be greater
             if(nums[i%n]>nums[(i+1)%n])
             {
                 c++;
             }
         }
+        //if there exits more than 1 check points return false
         if(c<=1)
             return true;
         else
