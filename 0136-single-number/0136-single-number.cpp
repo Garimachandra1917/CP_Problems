@@ -24,25 +24,39 @@
 
 //2.T(N), S(N) Hashing using map
 
+// class Solution {
+// public:
+//     int singleNumber(vector<int>& nums) {
+//         int n=nums.size();
+// 	map <int ,int> mp;
+// 	for(int i=0;i<n;i++)
+// 	{    
+// 		mp[nums[i]]++;
+// 	}
+
+// 	for(auto i :mp)
+// 	{
+// 		if(i.second!=2)
+// 		   return i.first;
+// 	}
+// 	return -1;
+//     }
+// };
+//-------------------------------------------------------------------------------
+
+//3. T(N) S(1) Bit manupilation XOR
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         int n=nums.size();
-	map <int ,int> mp;
+	    int xorr=0;
 	for(int i=0;i<n;i++)
-	{    
-		mp[nums[i]]++;
-	}
-
-	for(auto i :mp)
 	{
-		if(i.second!=2)
-		   return i.first;
+		xorr=xorr^nums[i];
 	}
-	return -1;
+	return xorr;
     }
 };
-
 
 
 
