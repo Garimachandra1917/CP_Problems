@@ -45,9 +45,9 @@ public:
         }
         
         //step.4 : put back the elements from the auxiliary array back to the main array 
-        for(int i=d-1;i>=0;i--)
+        for(int i=0;i<d;i++)
         {
-            nums[abs(i-(d-1))]=v[i];
+            nums[d-i-1]=v[i];
         }
         
     }
