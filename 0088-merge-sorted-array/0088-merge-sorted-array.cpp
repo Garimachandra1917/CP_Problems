@@ -6,7 +6,7 @@ public:
         int j=0;
         while(i>=0 && j<n)//while any of the array exhausts
         {
-            if(nums1[i]>nums2[j])//compare the largest of nums1 and smalledt of nums2
+            if(nums1[i]>nums2[j])//compare the largest of nums1 and smallest of nums2
             {   
                 swap(nums1[i],nums2[j]);//swap if nums1 is greater
                 i--;
@@ -14,7 +14,7 @@ public:
             }
             else 
             {
-                break; // if ant case appaers that nums1 has lesser element ->no point to compare further as it will only                         have even lesser elements
+                break; // if any case appaers that nums1 has lesser element ->no point to compare further as it will only                         have even lesser elements
             }
         }
         sort(nums1.begin(),nums1.begin()+m);
