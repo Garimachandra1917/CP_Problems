@@ -13,9 +13,9 @@ public:
                 return mid;
             }
             
-            if(a[low] <= a[mid])
+            if(a[low] <= a[mid])  //if left half sorted
             {
-                if(t >= a[low] && t < a[mid])
+                if(t >= a[low] && t < a[mid]) // if t lies in the left half
                 {
                     high = mid-1;
                 }
@@ -24,9 +24,9 @@ public:
                     low = mid+1;
                 }
             }
-            else
+            else // else if right half is sorted
             {
-                if(t > a[mid] && t <= a[high])
+                if(t > a[mid] && t <= a[high]) //if t lies in the right half
                 {
                     low = mid+1;
                 }
@@ -36,6 +36,6 @@ public:
                 }
             }
         }
-        return -1;
+        return -1;  //value not found
     }
 };
